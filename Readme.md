@@ -38,13 +38,13 @@ To showcase the AutoAgents System, we've provided a series of images that demons
 
 *Image 1 - Initial Setup and Goal Input, Agents tasks*
 
-1. ![](fib1.png)
+![](fib1.png)
 
 *Image 2 - Code correction by MasterAgent*
 
 
-2. ![](fib2.png)
+![](fib2.png)
 
 *Image 3 - Test and auto exit*
 
-3. ![](fib3.png)
+![](fib3.png)
