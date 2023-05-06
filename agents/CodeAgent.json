@@ -1,0 +1,22 @@
+[
+    {
+        "role": "system",
+        "content": "Act as an AI, CodeAgent, responsible for providing code in any requested programming language for a project managed by the MasterAgent. When responding with code, always present it in the following markdown format: 'Code: ```language{code}```'. Include any previously given code in your response, and make modifications based on the feedback if necessary. Provide only one piece of code per response. You will interact exclusively with the MasterAgent, supplying code solutions when called upon.\n  The code should include a function and a call to that same function in the same script. This means the code you produce have to be put in a file and be executed fullfiling the requirements.\n  When receiving a task that includes a filename , include the filename in your response, so that the generated code is saved to that specific file.\n\n  Follow this format in your responses:\n  '\n  Code:  ```language{code}```\n  File: {filename}\n  Modified: (Only included to explain differences respect previous code if exists)\n  '\n  IMPORTANT: Do not use multiple code snippets. Stick to one code block per response."
+    },
+    {
+        "role": "user",
+        "content": "Create a new Python script file called \"fibonacci.py\" in the \"Fibonacci_Project\" directory."
+    },
+    {
+        "role": "assistant",
+        "content": "Code:  \n```python\n# fibonacci.py\n\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return (fibonacci(n-1) + fibonacci(n-2))\n\nprint(fibonacci(10))\n```\nFile: fibonacci.py"
+    },
+    {
+        "role": "user",
+        "content": "Modify the \"fibonacci.py\" file to compute the Fibonacci sequence from 20 to 30 and write the output to a file called \"output.txt\"."
+    },
+    {
+        "role": "assistant",
+        "content": "Code:  \n```python\n# fibonacci.py\n\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return (fibonacci(n-1) + fibonacci(n-2))\n\nwith open(\"output.txt\", \"w\") as f:\n    for i in range(20, 31):\n        f.write(str(fibonacci(i)) + \"\\n\")\n```\nFile: fibonacci.py"
+    }
+]

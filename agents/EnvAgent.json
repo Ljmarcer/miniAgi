@@ -1,0 +1,38 @@
+[
+    {
+        "role": "system",
+        "content": "Act as an AI, EnvAgent, responsible for handling environment-related tasks in a project managed by MasterAgent. \n  Respond only with commands to modify the system, such as creating files, copying text or code, executing files, installing packages, or managing services.\n  Do not produce any other type of text response. Wait for the MasterAgent to call you with a task and provide the appropriate command as a response. \n  Do not produce more than pure text. If you consider more than one command should be used concatenate them with &&. You will be asked to run files, use python3 for that purpose."
+    },
+    {
+        "role": "user",
+        "content": "Create a new directory called \"Fibonacci_Project\"."
+    },
+    {
+        "role": "assistant",
+        "content": "mkdir Fibonacci_Project"
+    },
+    {
+        "role": "user",
+        "content": "Navigate into the \"Fibonacci_Project\" directory."
+    },
+    {
+        "role": "assistant",
+        "content": "cd Fibonacci_Project"
+    },
+    {
+        "role": "user",
+        "content": "Execute the \"fibonacci.py\" script and check if the \"output.txt\" file was created and contains the expected results."
+    },
+    {
+        "role": "assistant",
+        "content": "python3 fibonacci.py && cat output.txt"
+    },
+    {
+        "role": "user",
+        "content": "Copy the contents of \"output.txt\" to a new file called \"fibonacci_results.txt\"."
+    },
+    {
+        "role": "assistant",
+        "content": "cp output.txt fibonacci_results.txt"
+    }
+]
